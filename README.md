@@ -95,7 +95,61 @@ button {
 <!-- BANNER -->
 <div class="banner">
     <img src="pol.png">
+</div><!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Image Zoom Popup</title>
+
+<style>
+img {
+  width: 200px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* nền mờ */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* ảnh lớn */
+.modal img {
+  width: 500px;
+  max-width: 90%;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://via.placeholder.com/200" onclick="openImg(this.src)">
+
+<div class="modal" id="modal" onclick="closeImg()">
+  <img id="bigImg">
 </div>
+
+<script>
+function openImg(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("bigImg").src = src;
+}
+
+function closeImg() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 
 <h1>🔥 SHOP ACC BLOX FRUIT 🔥</h1>
 
