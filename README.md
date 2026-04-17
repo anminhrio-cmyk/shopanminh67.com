@@ -14,23 +14,33 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #facc15;
-    padding: 20px;
+/* Banner */
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
+/* Tiêu đề */
+h1 {
+    color: #facc15;
+    margin: 20px 0;
+}
+
+/* Shop */
 .shop {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* Card */
 .card {
     background: #1e293b;
-    padding: 20px;
+    padding: 15px;
     margin: 15px;
     border-radius: 15px;
-    width: 260px;
+    width: 250px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
@@ -39,12 +49,15 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Ảnh */
 .card img {
     width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+/* Nút */
 button {
     background: linear-gradient(45deg, orange, red);
     border: none;
@@ -79,34 +92,31 @@ button {
 
 <body>
 
+<!-- BANNER -->
+<div class="banner">
+    <img src="banner.png">
+</div>
+
 <h1>🔥 SHOP ACC BLOX FRUIT 🔥</h1>
 
+<!-- SHOP -->
 <div class="shop">
-<div class="card">
 
-    <!-- ẢNH NẰM TRÊN -->
-    <img src="banner.png">
+    <!-- SẢN PHẨM -->
+    <div class="card">
 
-    <h2>Acc túi mù</h2>
-    <p style="color:yellow;">Chỉ còn: 5.000đ</p>
+        <img src="acc1.png">
 
-    <!-- NÚT MUA NẰM DƯỚI -->
-    <button onclick="buy()">Mua ngay</button>
+        <h2>Acc túi mù</h2>
+        <p style="color:yellow;">Chỉ còn: 5.000đ</p>
 
-</div>
-<div class="card">
-    <!-- ẢNH BẠN UPLOAD LÊN GITHUB -->
-    <img src="banner.png">
+        <button onclick="buy()">Mua ngay</button>
 
-    <h2>Acc túi mù</h2>
-    <p style="color:yellow;">Chỉ còn: 5.000đ</p>
-
-    <button onclick="buy()">Mua ngay</button>
-</div>
+    </div>
 
 </div>
 
-<!-- Popup thanh toán -->
+<!-- POPUP -->
 <div class="popup" id="popup">
     <div class="popup-box">
         <h2>Thanh toán</h2>
