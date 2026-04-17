@@ -105,7 +105,7 @@ button {
     <!-- SẢN PHẨM -->
     <div class="card">
 
-        <img src="acc1.png">
+        <img src="accuytin.png">
 
         <h2>Acc túi mù</h2>
         <p style="color:yellow;">Chỉ còn: 5.000đ</p>
