@@ -94,7 +94,7 @@ button {
 
 <!-- BANNER -->
 <div class="banner">
-    <img src="banner.png">
+    <img src="pol.png">
 </div>
 
 <h1>🔥 SHOP ACC BLOX FRUIT 🔥</h1>
