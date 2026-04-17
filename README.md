@@ -106,6 +106,7 @@ button:hover {
         <p>Nội dung: muaacc</p>
         <button onclick="closePopup()">Đóng</button>
     </div>
+    <img src="accuytin.png" width="100%">
 </div>
 
 <script>
@@ -121,8 +122,4 @@ function closePopup() {
 </body>
 </html>
 <div class="card">
-    <img src="acctuytin.png.width="100%" style="border-radius:10px;">
-    <h2>Acc túi mù</h2>
-    <p>Giá: 5.000đ</p>
-    <button onclick="buy()">Mua ngay</button>
-</div>
+    
