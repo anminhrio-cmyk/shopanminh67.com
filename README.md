@@ -120,3 +120,9 @@ function closePopup() {
 
 </body>
 </html>
+<div class="card">
+    <img src="acctuimu.jpg" width="100%" style="border-radius:10px;">
+    <h2>Acc túi mù</h2>
+    <p>Giá: 5.000đ</p>
+    <button onclick="buy()">Mua ngay</button>
+</div>
