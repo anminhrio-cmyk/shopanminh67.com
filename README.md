@@ -15,8 +15,8 @@ body {
 }
 
 h1 {
-    padding: 20px;
     color: #facc15;
+    padding: 20px;
 }
 
 .shop {
@@ -39,19 +39,21 @@ h1 {
     transform: scale(1.05);
 }
 
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
 button {
-    background: #f97316;
+    background: linear-gradient(45deg, orange, red);
     border: none;
     padding: 12px;
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
-    font-weight: bold;
     color: white;
-}
-
-button:hover {
-    background: red;
+    font-weight: bold;
 }
 
 /* Popup */
@@ -73,7 +75,6 @@ button:hover {
     border-radius: 15px;
 }
 </style>
-
 </head>
 
 <body>
@@ -83,20 +84,18 @@ button:hover {
 <div class="shop">
 
 <div class="card">
+    <!-- ẢNH BẠN UPLOAD LÊN GITHUB -->
+    <img src="banner.png">
+
     <h2>Acc túi mù</h2>
-    <p>Giá: 5.000đ</p>
-    <button onclick="buy()">Mua ngay</button>
-</div>
+    <p style="color:yellow;">Chỉ còn: 5.000đ</p>
 
-<div class="card">
-    <h2>Acc VIP</h2>
-    <p>Giá: 100.000đ</p>
     <button onclick="buy()">Mua ngay</button>
 </div>
 
 </div>
 
-<!-- Popup -->
+<!-- Popup thanh toán -->
 <div class="popup" id="popup">
     <div class="popup-box">
         <h2>Thanh toán</h2>
@@ -106,7 +105,6 @@ button:hover {
         <p>Nội dung: muaacc</p>
         <button onclick="closePopup()">Đóng</button>
     </div>
-    <img src="accuytin.png" width="100%">
 </div>
 
 <script>
@@ -121,5 +119,3 @@ function closePopup() {
 
 </body>
 </html>
-<div class="card">
-    
