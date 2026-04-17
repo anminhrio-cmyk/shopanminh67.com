@@ -82,7 +82,18 @@ button {
 <h1>🔥 SHOP ACC BLOX FRUIT 🔥</h1>
 
 <div class="shop">
+<div class="card">
 
+    <!-- ẢNH NẰM TRÊN -->
+    <img src="banner.png">
+
+    <h2>Acc túi mù</h2>
+    <p style="color:yellow;">Chỉ còn: 5.000đ</p>
+
+    <!-- NÚT MUA NẰM DƯỚI -->
+    <button onclick="buy()">Mua ngay</button>
+
+</div>
 <div class="card">
     <!-- ẢNH BẠN UPLOAD LÊN GITHUB -->
     <img src="banner.png">
