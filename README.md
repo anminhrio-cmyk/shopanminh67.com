@@ -61,7 +61,7 @@ button {
 
 <script>
 function buy() {
-    alert("Chuyển khoản:\nSTK: 123456789\nNgân hàng: MB Bank\nLiên hệ để nhận acc!");
+    alert("Chuyển khoản:\nSTK: 43831477 \nNgân hàng: ACB Bank\nLiên hệ để nhận acc!");
 }
 </script>
 
