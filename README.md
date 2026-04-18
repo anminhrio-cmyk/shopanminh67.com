@@ -196,7 +196,7 @@ button:hover {
     <div class="pay-box" id="payBox">
         <h3>💳 MOMO / NGÂN HÀNG</h3>
         <p><b>Momo:</b> 0901234567</p>
-        <p><b>Bank:</b> MB Bank</p>
+        <p><b>Bank:</b> ACB Bank</p>
         <p><b>STK:</b> 123456789</p>
         <p><b>Chủ TK:</b> SHOP BLOX FRUIT</p>
     </div>
@@ -255,3 +255,13 @@ function showPay() {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Shop Blox Fruit VIP</title>
+
+<style>
+body {
+    margin: 0;
+    font
