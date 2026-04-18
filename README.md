@@ -1,38 +1,70 @@
 # shopanminh67.com
 <script>
-let cart = [];
 
-// 🎲 DANH SÁCH ACC (có user + pass)
-let randomAccounts = [
-    {user: "BloxUser001", pass: "Pass1234"},
-    {user: "DragonKing99", pass: "Mochi777"},
-    {user: "YoruMasterX", pass: "DarkBlade88"},
-    {user: "KitsuneGod01", pass: "Fox9999"},
-    {user: "BuddhaTank77", pass: "TankPro55"}
-];
+let cart = [];
+let sheetAccounts = [];
+
+// 🔗 GOOGLE SHEET LINK
+const SHEET_URL = "https://opensheet.elk.sh/YOUR_SHEET_ID/Sheet1";
+
+// 📦 lưu acc đã bán (local)
+let soldAccounts = JSON.parse(localStorage.getItem("soldAcc")) || [];
+
+// 📥 LOAD ACC
+async function loadAccounts() {
+    try {
+        let res = await fetch(SHEET_URL);
+        sheetAccounts = await res.json();
+        console.log("Loaded:", sheetAccounts);
+    } catch (e) {
+        console.log("Error load sheet");
+    }
+}
+
+// 🎲 LẤY ACC CHƯA BÁN
+function getRandomAcc() {
+
+    // lọc acc chưa bán
+    let available = sheetAccounts.filter(acc => {
+        return !soldAccounts.includes(acc.user);
+    });
+
+    if (available.length === 0) {
+        return {user: "HẾT ACC", pass: "NO DATA"};
+    }
+
+    let acc = available[Math.floor(Math.random() * available.length)];
+
+    return acc;
+}
+
+// 💾 đánh dấu đã bán
+function markSold(user) {
+    soldAccounts.push(user);
+    localStorage.setItem("soldAcc", JSON.stringify(soldAccounts));
+}
 
 function add(name, price) {
 
-    // 🎲 ACC RANDOM VIP 5K
     if (name === "Acc Random VIP") {
 
-        let acc = randomAccounts[Math.floor(Math.random() * randomAccounts.length)];
+        let acc = getRandomAcc();
 
-        let accInfo = `
-🎉 ACC CỦA BẠN:
+        alert(
+`🎉 ACC CỦA BẠN:
 👤 User: ${acc.user}
-🔑 Pass: ${acc.pass}
-        `;
+🔑 Pass: ${acc.pass}`
+        );
 
-        alert(accInfo);
+        // ❗ đánh dấu đã bán
+        markSold(acc.user);
 
         cart.push({
             name: `Acc Random VIP (${acc.user})`,
             price: 5000
         });
 
-    } 
-    else {
+    } else {
         cart.push({name, price});
     }
 
@@ -80,4 +112,8 @@ function show(type) {
 function showPay() {
     document.getElementById("payBox").style.display = "block";
 }
+
+// 🚀 load sheet
+loadAccounts();
+
 </script>
