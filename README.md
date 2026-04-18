@@ -175,8 +175,8 @@ function closeImg() {
     <div class="popup-box">
         <h2>Thanh toán</h2>
         <p>STK: <b>0987654321</b></p>
-        <p>Ngân hàng: Vietcombank</p>
-        <p>Tên: Nguyễn Văn A</p>
+        <p>Ngân hàng: ACB </p>
+        <p>Tên: ĐẬU XUÂN MAI /p>
         <p>Nội dung: muaacc</p>
         <button onclick="closePopup()">Đóng</button>
     </div>
