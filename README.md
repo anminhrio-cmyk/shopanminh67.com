@@ -1,5 +1,4 @@
 # shopanminh67.com
-HTML
 <script>
 let cart = [];
 
